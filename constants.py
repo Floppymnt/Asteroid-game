@@ -6,6 +6,7 @@ FPS = 60
 
 PLAYER_RADIUS = 20
 PLAYER_TURN_SPEED = 300  # degrees per second
+PLAYER_SPEED = 500  # pixels per second squared
 
 
 ASTEROID_MIN_RADIUS = 20
