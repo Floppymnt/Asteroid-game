@@ -1,5 +1,6 @@
 import pygame
 from constants import *
+from player import player
 
 
 def main():
@@ -21,6 +22,9 @@ def main():
     pygame.display.set_caption("Asteroids Game")
 
 
+    player_sprite = player(SCREEN_WIDTH /2, SCREEN_HEIGHT / 2,PLAYER_RADIUS)
+    print(f"Player initialized")
+
     while True:
 
         # Handle events
@@ -33,12 +37,19 @@ def main():
                 return
 
 
+      
 
-        screen.fill("black")
+        screen.fill("black")  
+        player_sprite.draw(screen)
         pygame.display.flip()
 
-       
         dt =  clock.tick(FPS) / 1000.0 # cap the frame rate to FPS and get delta time
+        player_sprite.update(dt)
+        
+
+
+       
+        
 
 
 
