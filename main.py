@@ -48,14 +48,12 @@ def main():
         # Handle events
         for event in pygame.event.get():
 
-
             if event.type == pygame.QUIT: #quit the game
                 print("USER EXIT EVENT: exiting game loop.")
                 # pygame.quit()
                 return
 
-
-      
+            #pass    
 
         screen.fill("black") 
         for sprite in drawable:
@@ -65,6 +63,16 @@ def main():
 
         dt =  clock.tick(FPS) / 1000.0 # cap the frame rate to FPS and get delta time
         updatable.update(dt)
+
+        for asteroid in asteroid_field:
+            
+            if player_sprite.collide(asteroid):
+                print("Collision detected between player and asteroid.\nGAME OVER!")
+                return  # Exit the game loop on collision
+
+            #pass
+
+
         
 
 
