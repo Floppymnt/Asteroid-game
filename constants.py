@@ -1,15 +1,25 @@
+#this is a place to store MAGIC NUMBERS 
+
 SCREEN_WIDTH = 1280
 SCREEN_HEIGHT = 720
 
-FPS = 60
+# fps is tide with the movement speed of entities through dt 
+FPS = 60 
 
 
+# PLAYER 
 PLAYER_RADIUS = 20
-PLAYER_TURN_SPEED = 300  # degrees per second
-PLAYER_SPEED = 500  # pixels per second squared
+PLAYER_TURN_SPEED = 300  
+PLAYER_SPEED = 500  
 
 
+# PROJECTILES
+SHOT_RADIUS = 5
+PLAYER_SHOOT_SPEED = 500
+
+
+# ASTEROIDS
 ASTEROID_MIN_RADIUS = 20
 ASTEROID_KINDS = 3
-ASTEROID_SPAWN_RATE = 0.8  # seconds
+ASTEROID_SPAWN_RATE = 0.8  
 ASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS
