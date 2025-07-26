@@ -1,4 +1,5 @@
 import pygame
+from constants import *
 
 # Base class for game objects
 class CircleShape(pygame.sprite.Sprite):
@@ -20,6 +21,9 @@ class CircleShape(pygame.sprite.Sprite):
     def update(self, dt):
         # sub-classes must override
         pass
+
+    def rotate(self,dt):
+        self.rotation += PLAYER_TURN_SPEED * dt
 
     def collide(self, other):
         # Check for collision with another CircleShape

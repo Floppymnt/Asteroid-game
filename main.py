@@ -73,6 +73,13 @@ def main():
             if player_sprite.collide(asteroid):
                 print("Collision detected between player and asteroid.\nGAME OVER!")
                 return  # Exit the game loop on collision
+            
+            # Check for collisions between shots and asteroids
+            for shot in shots:
+                if shot.collide(asteroid):
+                    print("Collision detected between shot and asteroid.")
+                    asteroid.split()
+                    shot.kill()
 
             #pass
 
